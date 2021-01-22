@@ -3,8 +3,7 @@ Um módulo npm para criar componentes com estados e propriedades com apenas uma 
 
 
 
-Em Desenvolvimento
+### Em Desenvolvimento
 
-Desenvolvedores:
-
-Felipe Garcia Alves - felip.garciaalves@gmail.com
+### Desenvolvedores
+- **Felipe Garcia Alves ([felipAlves](https://github.com/felipAlves)) - felip.garciaalves@gmail.com - desenvolvedor ativo**
