@@ -7,17 +7,15 @@
     function makeComponent(component, componentName) {
         this.preFinalHtml = []
         
-        const objetos = Object.keys(component).map(key => {
+        const StructurePreFinalHtml = Object.keys(component).map(key => {
             if(component[key].children) {
                 let nowObjetc = component[key].children
                 let found = true
                 let childrens = []    
                 
-                this.preFinalHtml = Object.keys(component[key].attributes).map(keyMainContainer => {
-                    this.preFinalHtml['div'] = [keyMainContainer]
-                    this.preFinalHtml['div'][keyMainContainer] = `${keyMainContainer}='${component[key].attributes[keyMainContainer]}'`
-
-                    console.log(preFinalHtml)
+                Object.keys(component[key].attributes).map(keyMainContainer => {
+                    this.preFinalHtml[key] = [keyMainContainer]
+                    this.preFinalHtml[key][keyMainContainer] = `${keyMainContainer}='${component[key].attributes[keyMainContainer]}'`
                 })
 
                 do {
@@ -28,6 +26,11 @@
                             children: nowObjetc[newKey]
                         }
 
+                        Object.keys(nowObjetc[newKey].attributes).map(keyNowObject => {
+                            this.preFinalHtml[newKey] = [keyNowObject]
+                            this.preFinalHtml[newKey][keyNowObject] = `${keyNowObject}=${nowObjetc[newKey].attributes[keyNowObject]}'`
+                        })
+
                         nowObjetc = nowObjetc[newKey]
 
                         if(!nowObjetc[newKey]) {
@@ -37,15 +40,13 @@
 
                 } while (found)
 
-                return childrens
+                return this.preFinalHtml
             }
 
             
         });
 
-        const [ obj ] = objetos
-
-        return obj
+        return StructurePreFinalHtml
     }
 
 
@@ -61,10 +62,15 @@
                         p: {
                             content: 'ola'
                         }
+                    },
+                    attributes: {
+                        class: 'title'
                     }
-                }   
+                },
             }
         }
     }, 'MainComponent')
+
+    console.log(response)
 
 })()
