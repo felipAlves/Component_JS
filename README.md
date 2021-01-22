@@ -1,2 +1,2 @@
-# Component_TS
-Um módulo npm para tentar recriar o sistema de componentização com Javascript puro. A aplicação tem apenas finalidade no aprendizado.
+# FP_Component_JS
+Um módulo npm para criar componentes com estados e propriedades com apenas uma função. A aplicação tem apenas finalidade no aprendizado, porém quem quiser pode usar :D.
