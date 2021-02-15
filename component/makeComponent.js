@@ -1,4 +1,4 @@
-function makeComponent() {
+function createComponentStructure() {
 
     const state = {
         observers: []
@@ -16,16 +16,16 @@ function makeComponent() {
         }
     }
 
-    function createComponentStructure() {
+    function makeComponent(params) {
 
         // para cada filho da div verificar  os attributos e se o elemento é valido
-        notifyAll({ ola: '' })
+        notifyAll(params)
 
     }
 
     return {
         subscribe,
-        createComponentStructure
+        makeComponent
     }
 }
 
@@ -47,12 +47,12 @@ function validateAttributesAndChildrens(params) {
 }
 
 
-const newComponent = makeComponent()
+const component = createComponentStructure()
 
-newComponent.subscribe(composeHtmlToComponent)
-newComponent.subscribe(validateAttributesAndChildrens)
+component.subscribe(composeHtmlToComponent)
+component.subscribe(validateAttributesAndChildrens)
 
-newComponent.createComponentStructure()
+component.makeComponent({ nome: 'Felipe' })
 
 
 
