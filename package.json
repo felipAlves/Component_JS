@@ -4,12 +4,5 @@
   "main": "index.js",
   "repository": "https://github.com/felipAlves/fp-components-js.git",
   "author": "Felipe Garcia Alves <47622464+felipAlves@users.noreply.github.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev:server": "ts-node-dev --respawn --transpileOnly src/index.ts"
-  },
-  "devDependencies": {
-    "ts-node-dev": "^1.1.1",
-    "typescript": "^4.1.4"
-  }
+  "license": "MIT"
 }
