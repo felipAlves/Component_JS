@@ -31,18 +31,18 @@ function createComponentStructure() {
 
 
 function composeHtmlToComponent(params) {
-    console.log(params)
+    let html = ''
 
     return {
-
+        html
     }
 }
 
 function validateAttributesAndChildrens(params) {
-    console.log(params)
+    let errors = []
 
     return {
-
+        errors
     }
 }
 
